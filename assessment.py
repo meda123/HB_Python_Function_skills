@@ -59,15 +59,21 @@ included in the doctest.
 #    (a) Write a function that takes a town name as a string and evaluates to
 #        `True` if it is your hometown, and `False` otherwise.
 
+# def is_it_my_hometown(town): 
+#      """Return True if my hometown (Rockville) is passed as an argument
+#      """
+# if town == "Rockville":
+#     return True
+# else:
+#     return False 
+
 def is_it_my_hometown(town): 
-     """Return True if my hometown (Rockville) is passed as an argument
-     """
     if town == "Rockville":
         return True
     else:
-        return False         
+        return False            
     
-#print is_it_my_hometown("Rockville") #Test: Returns True 
+print is_it_my_hometown("Rockville") #Test: Returns True 
 
 #    (b) Write a function that takes a first and last name as arguments and
 #        returns the concatenation of the two names in one string.
@@ -77,20 +83,20 @@ def first_and_last(first, last):
      """
     return first + " " + last  
 
-#print first_and_last("medalis", "trelles") #Test: Returns "medalis trelles" 
+print first_and_last("medalis", "trelles") #Test: Returns "medalis trelles" 
 
 
-#    (c) Write a function that takes a home town, a first name, and a last name
-#        as arguments, calls both functions from part (a) and (b) and prints
-#        "Hi, 'full name here', we're from the same place!", or "Hi 'full name
-#        here', where are you from?" depending on what the function from part
-#        (a) evaluates to.
+# #    (c) Write a function that takes a home town, a first name, and a last name
+# #        as arguments, calls both functions from part (a) and (b) and prints
+# #        "Hi, 'full name here', we're from the same place!", or "Hi 'full name
+# #        here', where are you from?" depending on what the function from part
+# #        (a) evaluates to.
 
 def home_first_last(home,fname, lname):
     if is_it_my_hometown(home) == True: 
-        return "Hi!" + last_and_first(fname, lname) + " we're from the same place"    
+        return "Hi!" + first_and_last(fname, lname) + " we're from the same place"    
     elif is_it_my_hometown(home) == False:
-        return "Hi!" + last_and_first(fname, lname) + " where are you from?"  
+        return "Hi!" + first_and_last(fname, lname) + " where are you from?"  
 
 print home_first_last("Stanford", "Medalis", "Trelles")         
 
