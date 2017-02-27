@@ -117,7 +117,10 @@ def is_berry(fruit):
 def shipping_cost(fruit):
     """Calculates shipping cost of fruit"""
 
-    pass
+    if is_berry(fruit) == True:
+        return 0
+    elif is_berry(fruit) == False: 
+        return 5
 
 
 # 2. Make a function that takes in a number and a list of numbers. It should
