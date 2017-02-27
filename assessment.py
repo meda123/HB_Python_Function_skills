@@ -130,9 +130,9 @@ def shipping_cost(fruit):
 def append_to_list(lst, num):
     """Creates a new list consisting of the old list with the given number
        added to the end."""
-
-    pass
-
+    new_list = lst
+    new_list.append(num)
+    return new_list
 
 
 # 3. Write a function calculate_price to calculate an item's total cost by
