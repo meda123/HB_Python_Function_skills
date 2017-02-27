@@ -151,14 +151,36 @@ def append_to_list(lst, num):
 #    Your function should return the total cost of the item, including tax and
 #    fees.
 
-def calculate_price(FILL_ME_IN):
 
-    pass
+#NOTE from Medalis: I ran out of time, I got most of it working but I have 5 
+# errors left to correct. I will keep working on this tonight. 
 
+base = float (10.0) 
+tax =0.05
+
+def calculate_price(base, state, tax='0.05'):
+    if state == "CA":
+        recycle = 0.03
+        total_cost = (float (base) * float ((tax + recycle))) + base
+    if state == "PA":
+        highway_fee = 2.0
+        total_cost = (float (base) * float(tax)) + base + highway_fee
+    if state == "MA":
+        if base < 100:
+            comm_fee_less = float (1.0)
+            total_cost = (float (base) * float(tax)) + base + comm_fee_less
+        elif base >= 100:
+            comm_fee_more = float (3.0)
+            total_cost = (float (base) * float(tax)) + base + comm_fee_more
+
+    return total_cost
 
 ###############################################################################
 
 # PART THREE: ADVANCED
+
+# NOTE from Medalis: Did not get to here because I was trying to catch up
+# NOTE from Medalis: Will see advisor to go over advanced work! 
 
 # NOTE: We haven't given you function signatures and docstrings for these, so
 # you'll need to write your own. These functions also aren't included in the
