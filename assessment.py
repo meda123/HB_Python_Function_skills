@@ -59,14 +59,6 @@ included in the doctest.
 #    (a) Write a function that takes a town name as a string and evaluates to
 #        `True` if it is your hometown, and `False` otherwise.
 
-# def is_it_my_hometown(town): 
-#      """Return True if my hometown (Rockville) is passed as an argument
-#      """
-# if town == "Rockville":
-#     return True
-# else:
-#     return False 
-
 def is_it_my_hometown(town): 
     if town == "Rockville":
         return True
@@ -108,11 +100,13 @@ print home_first_last("Stanford", "Medalis", "Trelles")
 #        and returns a boolean if the fruit is a "strawberry", "cherry", or
 #        "blackberry."
 
+fruits = ["strawberry", "cherry", "blackberry"]
 
 def is_berry(fruit):
     """Determines if fruit is a berry"""
+    if fruit in fruits:
+        return True 
 
-    pass
 
 
 # (b) Write another function, shipping_cost(), which calculates shipping cost
