@@ -67,10 +67,17 @@ def is_it_my_hometown(town):
     else:
         return False         
     
-print is_it_my_hometown("Rockville") #Test: Returns True 
+#print is_it_my_hometown("Rockville") #Test: Returns True 
 
 #    (b) Write a function that takes a first and last name as arguments and
 #        returns the concatenation of the two names in one string.
+
+def first_and_last(first, last):
+    """Concatenates first and last name
+     """
+    return first + " " + last  
+
+#print first_and_last("medalis", "trelles") #Test: Returns "medalis trelles" 
 
 
 #    (c) Write a function that takes a home town, a first name, and a last name
@@ -79,7 +86,13 @@ print is_it_my_hometown("Rockville") #Test: Returns True
 #        here', where are you from?" depending on what the function from part
 #        (a) evaluates to.
 
+def home_first_last(home,fname, lname):
+    if is_it_my_hometown(home) == True: 
+        return "Hi!" + last_and_first(fname, lname) + " we're from the same place"    
+    elif is_it_my_hometown(home) == False:
+        return "Hi!" + last_and_first(fname, lname) + " where are you from?"  
 
+print home_first_last("Stanford", "Medalis", "Trelles")         
 
 ###############################################################################
 
