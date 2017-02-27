@@ -59,12 +59,19 @@ included in the doctest.
 #    (a) Write a function that takes a town name as a string and evaluates to
 #        `True` if it is your hometown, and `False` otherwise.
 
-def is_it_my_hometown(): 
+def is_it_my_hometown(town): 
+     """Return True if my hometown (Rockville) is passed as an argument
+     """
+    if town == "Rockville":
+        return True
+    else:
+        return False         
     
-
+print is_it_my_hometown("Rockville") #Test: Returns True 
 
 #    (b) Write a function that takes a first and last name as arguments and
 #        returns the concatenation of the two names in one string.
+
 
 #    (c) Write a function that takes a home town, a first name, and a last name
 #        as arguments, calls both functions from part (a) and (b) and prints
